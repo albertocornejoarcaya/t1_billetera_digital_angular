@@ -1,0 +1,41 @@
+<section class="card border-primary shadow-sm">
+  <div class="card-header bg-primary text-white fw-bold">
+    Nuevo Movimiento
+  </div>
+  <div class="card-body">
+    <div class="row g-3">
+      <div class="col-12 col-md-6">
+        <label class="form-label small text-secondary mb-1" for="tipo-movimiento">Tipo</label>
+        <select id="tipo-movimiento" class="form-select" [(ngModel)]="tipo">
+        <option value="Recarga">Recarga</option>
+        <option value="Gasto">Gasto</option>
+        </select>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <label class="form-label small text-secondary mb-1" for="monto-movimiento">Monto (S/)</label>
+        <input id="monto-movimiento" type="number" min="0" class="form-control" placeholder="0.00" [(ngModel)]="monto">
+      </div>
+    </div>
+
+    @if (gastoInvalido) {
+      <div class="alert alert-danger py-2 mt-3 mb-0">
+        El gasto supera el saldo disponible
+      </div>
+    }
+
+    @if (montoNegativo) {
+      <div class="alert alert-warning py-2 mt-3 mb-0">
+        El monto no puede ser negativo
+      </div>
+    }
+
+    <button
+      type="button"
+      class="btn btn-primary w-100 mt-3"
+      [disabled]="gastoInvalido || montoNegativo || monto <= 0"
+      (click)="registrar()">
+      Agregar movimiento
+    </button>
+  </div>
+</section>
