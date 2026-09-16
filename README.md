@@ -19,6 +19,10 @@ Aplicación web desarrollada con Angular para gestionar una billetera digital, p
 ## Instalación
 
 Clonar el repositorio:
-
-```bash
 git clone https://github.com/albertocornejoarcaya/t1_billetera_digital_angular.git
+
+## Equipo de desarrolladores
+1. Cornejo Arcaya Luis Alberto 	N00255638 
+2. Gonzales Aguirre Ricardo Fabian 	N00225627 
+3. Huallpa Atoccsa Irineo 	N00209202 
+4. Vasquez Vasquez Renzo Lauriano 	N00176189 
